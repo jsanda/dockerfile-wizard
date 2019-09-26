@@ -6,7 +6,7 @@ image_config: &image_config
 
   IMAGE_NAME: python-java
 
-  IMAGE_TAG: 0.1.0
+  IMAGE_TAG: py-3.6.1
 
   # NOTE: if you're modifying this config.yml file manually
   # rather than using the included setup script,
@@ -19,7 +19,7 @@ image_config: &image_config
 
   # NODE_VERSION_NUM: # pick a version from https://nodejs.org/dist
 
-  PYTHON_VERSION_NUM: 3.7.1
+  PYTHON_VERSION_NUM: 3.6.1
 
   JAVA: true
 
@@ -54,7 +54,7 @@ jobs:
 
   test_image:
     docker:
-      - image: $DOCKER_USERNAME/python-java:0.1.0
+      - image: $DOCKER_USERNAME/python-java:py-3.6.1
         environment:
           <<: *image_config
 
